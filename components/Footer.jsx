@@ -73,7 +73,6 @@ const Footer = () => {
                 <a href="http://on-app.in/app/home/iiddy">
                   <img
                     src="./android-download.webp"
-                    x
                     className="app-download-img"
                     alt=""
                   />
