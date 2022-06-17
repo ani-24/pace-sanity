@@ -1,0 +1,17 @@
+@use "./maps" as *;
+
+@mixin grid($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: $gap;
+}
+
+@mixin media-queries($breakpoint) {
+  $size: map-get(
+    $map: $breakpoints,
+    $key: $breakpoint,
+  );
+  @media (min-width: $size) {
+    @content;
+  }
+}

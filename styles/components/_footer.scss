@@ -1,0 +1,85 @@
+@use "./../variables" as *;
+
+.footer {
+  background: lighten($color: $bg-clr, $amount: 10%);
+  .footer-top {
+    .column {
+      width: 100%;
+      text-align: start;
+      padding: 1em 2em;
+      .column-heading {
+        font-size: 1.3rem;
+        color: $fg-heading-clr;
+        margin-bottom: 1em;
+      }
+      .column-body {
+        color: $fg-clr;
+        font-size: 0.9rem;
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            margin-bottom: 10px;
+            i {
+              margin-right: 0.5em;
+            }
+            a {
+              text-decoration: none;
+              color: $fg-clr;
+              padding-bottom: 5px;
+              position: relative;
+              color: $primary-clr;
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 1px;
+                width: 0;
+                transition: 250ms ease-out;
+                background: $primary-clr;
+              }
+              &:hover::after {
+                width: 100%;
+                left: 0;
+              }
+            }
+          }
+        }
+        &.address {
+          .map {
+            border: 0;
+            width: 100%;
+            height: 300px;
+          }
+        }
+      }
+      .app-download-img {
+        width: 50%;
+      }
+    }
+    @media (min-width: 768px) {
+      & {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, min-content);
+      }
+    }
+    @media (min-width: 1400px) {
+      & {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+  .copyright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: darken($color: $bg-clr, $amount: 5%);
+    padding: 1em;
+    .section-inner {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "./../variables/" as *;
+@use "./../abstracts/" as *;
+
+body {
+  font-size: 14px;
+  line-height: 2em;
+}
+
+@each $level, $size in $heading {
+  #{$level} {
+    font-size: $size;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $fg-heading-clr;
+}

@@ -1,0 +1,32 @@
+@use "./../variables/" as *;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $text-font, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: $bg-clr;
+  color: $fg-clr;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[class*="-inner"] {
+  width: 95%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+::selection {
+  background: $primary-clr;
+  color: $bg-clr;
+}

@@ -1,0 +1,71 @@
+@use "./../variables/" as *;
+@use "./../abstracts" as *;
+
+.intro-text {
+  width: 75%;
+  text-align: center;
+  margin: 2em auto;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.course-gallery {
+  padding: 0 10%;
+  margin-top: 30px;
+  .course {
+    margin-bottom: 15px;
+    .course-body {
+      background: $bg-clr;
+      padding: 25px;
+      .course-title {
+        font-weight: 900;
+        font-size: 1.3rem;
+        margin-bottom: 0.5em;
+      }
+      .course-desc {
+        font-size: 0.8rem;
+        li {
+          margin-bottom: 0.5em;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .course-footer {
+      width: 100%;
+      background: darken($color: $bg-clr, $amount: 8%);
+      padding: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .footer-details {
+        padding: 0.5em;
+        font-size: 0.8rem;
+        background: $bg-clr;
+      }
+    }
+  }
+  @include media-queries(sm) {
+    .course {
+      &-footer {
+        padding: 0.5em 0.3em;
+      }
+    }
+  }
+  @include media-queries(lg) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    grid-template-rows: repeat(auto, min-content);
+    align-items: end;
+    .course-body {
+      .course-desc {
+        font-size: 1rem;
+      }
+    }
+  }
+  @include media-queries(xl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
