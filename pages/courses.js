@@ -4,8 +4,8 @@ const Courses = ({ courses }) => {
   console.log(courses);
   return (
     <div>
-      {courses.map((el) => {
-        return <div>{el.title}</div>;
+      {courses.map((el, index) => {
+        return <div key={el._id}>{el.title}</div>;
       })}
     </div>
   );

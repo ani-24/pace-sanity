@@ -73,7 +73,7 @@ const DemoLectures = ({ videos }) => {
           <h3 className="section-heading">Demo Lectures</h3>
           <div className="video-gallery">
             {videos.map((video, index) => (
-              <div className="video-gallery__item" key={video.id}>
+              <div className="video-gallery__item" key={video._id}>
                 <div
                   className="video-gallery__item__video-poster"
                   onClick={() => openModal(video.videoId.split("/")[3])}
@@ -110,9 +110,10 @@ const Testimonial = ({ testimonial }) => {
           modules={[Navigation, Pagination]}
           className="testimonial-slider"
         >
-          {testimonial.map((el) => {
+          {testimonial.map((el, index) => {
+            console.log(el._id);
             return (
-              <SwiperSlide key={el.id}>
+              <SwiperSlide key={el._id}>
                 <h3 className="slider-heading">{el.person}</h3>
                 <p className="slider-body">{el.feedback}</p>
               </SwiperSlide>
