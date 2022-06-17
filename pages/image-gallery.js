@@ -7,7 +7,7 @@ const ImageGallery = ({ images }) => {
 
 export default ImageGallery;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const images = await client.fetch(`*[_type == "imageGallery"]`);
   return {
     props: {

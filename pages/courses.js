@@ -13,7 +13,7 @@ const Courses = ({ courses }) => {
 
 export default Courses;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const courses = await client.fetch(`*[_type == "courses"]`);
   return {
     props: {
