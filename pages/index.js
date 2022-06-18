@@ -22,10 +22,6 @@ const openModal = (id) => {
   document.body.appendChild(modal);
   const overlay = document.querySelector(".overlay");
   overlay.classList.remove("hide");
-  const close = document.createElement("div");
-  close.classList.add("modal-close");
-  close.innerHTML = `<i class="fa-solid fa-times"></i>`;
-  modal.appendChild(close);
   modal.addEventListener("click", (e) => {
     if (!e.target.classList.contains("modal-video")) {
       overlay.classList.add("hide");
