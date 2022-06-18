@@ -98,7 +98,8 @@
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba($color: #000000, $alpha: 0.9);
+  background: rgba($color: #000000, $alpha: 0.8);
+  backdrop-filter: blur(10px);
   transition: 750ms ease-in-out;
   z-index: 200;
   &.hide {
