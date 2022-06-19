@@ -144,18 +144,9 @@ section {
 
 .testimonial {
   .swiper {
-    &-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
     &-slide {
       width: 100%;
       padding: 2em 10%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       .slider-heading {
         font-size: 1.5rem;
         margin-bottom: 1em;
