@@ -9,15 +9,10 @@ export default {
       type: "string",
     },
     {
-      name: "fascilities",
-      title: "Fascilities",
-      type: "array",
-      of: [{ type: "string" }],
-    },
-    {
       name: "description",
       title: "Description",
-      type: "string",
+      type: "array",
+      of: [{ type: "block" }],
     },
     {
       name: "duration",
@@ -27,7 +22,7 @@ export default {
     {
       name: "price",
       title: "Price",
-      type: "string",
+      type: "number",
     },
   ],
 };
