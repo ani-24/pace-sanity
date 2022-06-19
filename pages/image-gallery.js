@@ -7,7 +7,6 @@ const ImageGallery = ({ images }) => {
     <div className="image-gallery">
       <div className="gallery-inner">
         {images.map((el, index) => {
-          console.log(el);
           return (
             <div className="image-gallery__item">
               <img
