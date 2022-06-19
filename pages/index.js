@@ -140,7 +140,7 @@ export default function Home({ videos, banner, testimonial }) {
   );
 }
 
-export const getServerSideProps = async () => {
+export async function getServerSideProps() {
   const videos = await client.fetch(`*[_type == "demo"]`);
   const banner = await client.fetch(`*[_type == "banner"]`);
   const testimonial = await client.fetch(`*[_type == "testimonial"]`);
@@ -151,4 +151,4 @@ export const getServerSideProps = async () => {
       testimonial,
     },
   };
-};
+}
