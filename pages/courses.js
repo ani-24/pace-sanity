@@ -1,11 +1,24 @@
 import { client } from "../lib/client";
+import PortableText from "@sanity/block-content-to-react";
 
 const Courses = ({ courses }) => {
-  console.log(courses);
   return (
-    <div>
+    <div className="course-gallery">
       {courses.map((el, index) => {
-        return <div key={el._id}>{el.title}</div>;
+        return (
+          <div className="course" key={el._id}>
+            <div className="course-body">
+              <div className="course-title">{el.title}</div>
+              <PortableText className="course-desc" blocks={el.description} />
+            </div>
+            <div className="course-footer">
+              <div className="footer-details course-duration">
+                {el.duration}
+              </div>
+              <div className="footer-details course-price">{el.price}</div>
+            </div>
+          </div>
+        );
       })}
     </div>
   );
