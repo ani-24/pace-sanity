@@ -11,11 +11,14 @@
   }
   &__item {
     width: 100%;
-    height: min-content;
-    background: $primary-clr;
     margin-bottom: 30px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
     &__img {
-      width: 100%;
+      position: relative;
+      height: 98%;
     }
   }
   @include media-queries(md) {

@@ -2,16 +2,14 @@ import { client } from "../lib/client";
 import { urlFor } from "../lib/client";
 
 const ImageGallery = ({ images }) => {
-  console.log(images);
   return (
     <div className="image-gallery">
       <div className="gallery-inner">
         {images.map((el, index) => {
           return (
-            <div className="image-gallery__item">
+            <div className="image-gallery__item" key={el._key}>
               <img
                 className="image-gallery__item__img"
-                key={el._key}
                 src={urlFor(el.asset._ref)}
                 alt={el.alt}
               />
