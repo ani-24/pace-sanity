@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 import Head from "next/head";
+import JumpToTop from "./Jump-to-Top";
 
 const Layout = ({ children }) => {
   return (
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
       </Head>
       <Header />
       <div className="main">{children}</div>
+      <JumpToTop />
       <Footer />
     </>
   );

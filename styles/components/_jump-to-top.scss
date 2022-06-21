@@ -1,0 +1,25 @@
+@use "./../variables/" as *;
+
+#jump-to-top-btn {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  height: 2rem;
+  width: 2rem;
+  background: $primary-clr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  color: $fg-heading-clr;
+  transition: all 250ms ease-in-out;
+  &:hover {
+    background: lighten($color: $bg-clr, $amount: 15%);
+  }
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
