@@ -75,7 +75,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="header__nav__item">
-              <Link href="/">
+              <Link href="/admission-process">
                 <a
                   className={`header__nav__item__link ${
                     router.pathname == "/admission-process" ? "active" : ""
@@ -150,7 +150,7 @@ const Header = () => {
               About Pace
             </a>
           </Link>
-          <Link href="/">
+          <Link href="/admission-process">
             <a
               href="#"
               className="sidenav__list__item"
