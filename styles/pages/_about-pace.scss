@@ -5,6 +5,8 @@
   padding: 1em;
   border-radius: 5px;
   color: $fg-heading-clr;
+  max-width: 95%;
+  margin: 1em auto;
   .section-title {
     margin-bottom: 0.5em;
     padding-bottom: 0.25em;
@@ -39,15 +41,6 @@
     video {
       width: 75%;
       margin: 1em auto;
-    }
-  }
-  ul {
-    margin-top: 0.5em;
-    margin-left: 1em;
-    font-size: 0.9rem;
-    list-style: none;
-    li {
-      margin-bottom: 0.5em;
     }
   }
 }
