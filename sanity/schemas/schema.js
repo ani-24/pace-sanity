@@ -10,6 +10,7 @@ import testimonial from "./testimonial";
 import courses from "./courses";
 import imageGallery from "./imageGallery";
 import videoGallery from "./videoGallery";
+import aboutPace from "./aboutPace";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,5 +25,6 @@ export default createSchema({
     courses,
     imageGallery,
     videoGallery,
+    aboutPace,
   ]),
 });
