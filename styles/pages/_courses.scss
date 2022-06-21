@@ -10,15 +10,17 @@
 }
 
 .course-gallery {
-  padding: 0 10%;
+  padding: 0 5%;
   margin-top: 30px;
   $course-bg: lighten($bg-clr, 10%);
   .course {
     margin-bottom: 15px;
     color: $fg-heading-clr;
+    height: 100%;
     &-body {
       background: $course-bg;
       padding: 25px;
+      height: calc(100% - 100px);
       .course-title {
         font-weight: 900;
         font-size: 1.3rem;
@@ -61,7 +63,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
-    align-items: end;
+    align-items: stretch;
   }
   @include media-queries(xl) {
     grid-template-columns: repeat(3, 1fr);
