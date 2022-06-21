@@ -1,0 +1,11 @@
+@use "./../abstracts/" as *;
+
+.video-gallery {
+  display: grid;
+  @include media-queries(md) {
+    @include grid(2, 10px);
+  }
+  @include media-queries(lg) {
+    @include grid(3, 30px);
+  }
+}
