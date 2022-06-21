@@ -1,5 +1,5 @@
 export default {
-  name: "demo",
+  name: "demoLectures",
   title: "Demo Videos",
   type: "document",
   fields: [
