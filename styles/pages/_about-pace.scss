@@ -1,0 +1,50 @@
+@use "./../variables/" as *;
+
+.about-section {
+  background: $night-blue;
+  padding: 1em;
+  border-radius: 5px;
+  .section-title {
+    margin-bottom: 1em;
+    padding-bottom: 0.25em;
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 75%;
+      background: $green;
+    }
+  }
+  .section-text {
+    opacity: 0.8;
+    p {
+      margin-top: 1em;
+    }
+  }
+  video {
+    width: 100%;
+    margin-top: 1em;
+    display: block;
+  }
+  @media (min-width: 1000px) {
+    width: 70%;
+    margin: 30px auto;
+    video {
+      width: 75%;
+      margin: 1em auto;
+    }
+  }
+  ul {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    font-size: 0.9rem;
+    list-style: none;
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
