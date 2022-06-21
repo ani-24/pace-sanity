@@ -16,6 +16,11 @@ const AboutPace = ({ sections, mentor }) => {
           </section>
         );
       })}
+      <section className="section about-section">
+        <h1 className="section-title">{mentor.title}</h1>
+        <PortableText blocks={mentor.description} className="section-text" />
+        <video src="./intro-to-mentor.mp4" controls></video>
+      </section>
     </div>
   );
 };
