@@ -6,7 +6,7 @@ const lightbox = (images, idx) => {
   const overlay = document.querySelector(".overlay");
   overlay.classList.remove("hide");
   const modal = document.createElement("div");
-  modal.classList.add("modal");
+  modal.classList.add("modal", "lightbox");
   modal.innerHTML = `
     <i class="fas fa-circle-chevron-left fa-2x slide-btn prev-btn"></i>
     <img class="current-img" src=${urlFor(images[idx].asset._ref)} alt=${
