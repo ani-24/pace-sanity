@@ -93,7 +93,6 @@ const Testimonial = ({ testimonial }) => {
           className="testimonial-slider"
         >
           {testimonial.map((el, index) => {
-            console.log(el._id);
             return (
               <SwiperSlide key={el._id}>
                 <h3 className="slider-heading">{el.person}</h3>

@@ -46,7 +46,6 @@ const lightbox = (images, idx) => {
         document.body.removeChild(modal);
       }, 750);
     }
-    console.log(e.target);
   });
 };
 
