@@ -1,14 +1,17 @@
 @use "./../variables/" as *;
 
 .about-section {
-  background: $night-blue;
+  background: lighten($color: $bg-clr, $amount: 10%);
   padding: 1em;
   border-radius: 5px;
+  color: $fg-heading-clr;
   .section-title {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     padding-bottom: 0.25em;
     position: relative;
     display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
     &::after {
       content: "";
       position: absolute;
@@ -16,7 +19,7 @@
       left: 0;
       height: 2px;
       width: 75%;
-      background: $green;
+      background: $primary-clr;
     }
   }
   .section-text {
