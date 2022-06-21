@@ -1,0 +1,21 @@
+.wame {
+  position: fixed;
+  left: 1em;
+  height: 4rem;
+  width: 4rem;
+  display: inline-block;
+  bottom: 1em;
+  opacity: 1;
+  animation: show 2000ms ease-in-out;
+  cursor: pointer;
+  @keyframes show {
+    from {
+      bottom: 80%;
+      opacity: 0;
+    }
+    to {
+      bottom: 1em;
+      opacity: 1;
+    }
+  }
+}

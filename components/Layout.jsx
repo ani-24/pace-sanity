@@ -4,6 +4,7 @@ import Footer from "./Footer";
 
 import Head from "next/head";
 import JumpToTop from "./Jump-to-Top";
+import Wame from "./Wame";
 
 const Layout = ({ children }) => {
   return (
@@ -19,6 +20,7 @@ const Layout = ({ children }) => {
       <Header />
       <div className="main">{children}</div>
       <JumpToTop />
+      <Wame />
       <Footer />
     </>
   );
