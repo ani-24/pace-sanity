@@ -29,10 +29,13 @@
       .course-desc {
         font-size: 0.8rem;
         line-height: 1.6rem;
-        li {
-          // margin-bottom: 0.5em;
-          &:last-child {
-            margin-bottom: 0;
+        ul {
+          margin-left: -1em;
+          li {
+            // margin-bottom: 0.5em;
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
       }
