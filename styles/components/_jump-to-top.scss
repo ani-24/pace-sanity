@@ -15,6 +15,7 @@
   pointer-events: none;
   color: $fg-heading-clr;
   transition: all 250ms ease-in-out;
+  z-index: 100;
   &:hover {
     background: lighten($color: $bg-clr, $amount: 15%);
   }

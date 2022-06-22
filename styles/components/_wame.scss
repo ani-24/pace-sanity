@@ -8,6 +8,7 @@
   opacity: 1;
   animation: show 2000ms ease-in-out;
   cursor: pointer;
+  z-index: 100;
   @keyframes show {
     from {
       bottom: 80%;
