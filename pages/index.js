@@ -28,6 +28,7 @@ const HeroSection = ({ title, description, buttonText }) => {
           <a
             className="hero-section__content__btn"
             href="https://www.youtube.com/PratapManishPACEInstitute"
+            target="_blank"
           >
             <i className="fa-regular fa-circle-play"></i> {buttonText}
           </a>
