@@ -25,11 +25,12 @@ const HeroSection = ({ title, description, buttonText }) => {
         <div className="hero-section__content">
           <h1 className="hero-section__content__title">{title}</h1>
           <p>{description}</p>
-          <Link href="/">
-            <a className="hero-section__content__btn">
-              <i className="fa-regular fa-circle-play"></i> {buttonText}
-            </a>
-          </Link>
+          <a
+            className="hero-section__content__btn"
+            href="https://www.youtube.com/PratapManishPACEInstitute"
+          >
+            <i className="fa-regular fa-circle-play"></i> {buttonText}
+          </a>
         </div>
       </div>
     </div>
