@@ -61,7 +61,7 @@ const Footer = () => {
                     <Link href="/image-gallery">Image Gallery</Link>
                   </li>
                   <li>
-                    <Link href="/about">About Pace</Link>
+                    <Link href="/about-pace">About Pace</Link>
                   </li>
                   <li>
                     <Link href="/admission-process">Admission Process</Link>
