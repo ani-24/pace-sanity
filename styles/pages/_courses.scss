@@ -23,16 +23,20 @@
       height: calc(100% - 100px);
       .course-title {
         font-weight: 900;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-bottom: 0.5em;
       }
       .course-desc {
-        font-size: 0.8rem;
-        line-height: 1.6rem;
+        font-size: 0.7rem;
+        @include media-queries(md) {
+          font-size: 0.8rem;
+        }
         ol {
-          margin-left: -1em;
+          margin-left: -1.5em;
+          @include media-queries(md) {
+            margin-left: -1em;
+          }
           li {
-            // margin-bottom: 0.5em;
             &:last-child {
               margin-bottom: 0;
             }
