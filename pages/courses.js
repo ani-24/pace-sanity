@@ -2,6 +2,9 @@ import { client } from "../lib/client";
 import PortableText from "@sanity/block-content-to-react";
 
 const Courses = ({ courses }) => {
+  courses.sort((a, b) =>
+    a.position > b.position ? 1 : b.position > a.position ? -1 : 0
+  );
   return (
     <div className="course-gallery">
       {courses.map((el, index) => {
