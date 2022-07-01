@@ -2,7 +2,10 @@
 @use "./../abstracts/" as *;
 
 body {
-  font-size: 14px;
+  font-size: 12px;
+  @include media-queries(sm) {
+    font-size: 14px;
+  }
   line-height: 2em;
 }
 
@@ -19,4 +22,5 @@ h4,
 h5,
 h6 {
   color: $fg-heading-clr;
+  line-height: 1;
 }
