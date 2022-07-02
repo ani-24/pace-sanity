@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 
 import { useState } from "react";
 
+import Image from "next/image";
+
 const Header = () => {
   const [visible, setVisible] = useState("hide");
   const router = useRouter();
@@ -14,7 +16,13 @@ const Header = () => {
           <div className="header__logo">
             <Link href="/">
               <a href="#">
-                <img src="./pace_logo.webp" alt="" />
+                <Image
+                  src="/pace_logo.webp"
+                  width={150}
+                  height={60}
+                  alt=""
+                  priority
+                />
               </a>
             </Link>
           </div>

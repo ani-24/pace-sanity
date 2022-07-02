@@ -14,13 +14,21 @@ import { Navigation, Pagination } from "swiper";
 
 // import modal
 import openModal from "./../components/Modal";
+import Image from "next/image";
+
+import HeroImg from "../public/pratap_manish.webp";
 
 const HeroSection = ({ title, description, buttonText }) => {
   return (
     <div className="hero-section">
       <div className="hero-section-inner">
         <div className="hero-section__img">
-          <img src="./pratap_manish.webp" alt="Pratap Manish" />
+          <Image
+            src={HeroImg}
+            layout="intrinsic"
+            priority
+            alt="Pratap Manish"
+          />
         </div>
         <div className="hero-section__content">
           <h1 className="hero-section__content__title">{title}</h1>
@@ -62,6 +70,7 @@ const DemoLectures = ({ videos }) => {
                   onClick={() => openModal(video.videoId.split("/")[3])}
                 >
                   <img
+                    loading="lazy"
                     src={`https://i.ytimg.com/vi/${
                       video.videoId.split("/")[3]
                     }/hqdefault.jpg`}

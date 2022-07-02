@@ -13,9 +13,7 @@
     align-items: center;
   }
   &__logo {
-    img {
-      max-width: 175px;
-    }
+    grid-column: 1 / span 2;
   }
   &__nav {
     display: none;
@@ -85,6 +83,9 @@
   @include media-queries(lg) {
     &__nav {
       display: flex;
+    }
+    &__logo {
+      grid-column: span 1;
     }
     .hamburger_menu {
       display: none;

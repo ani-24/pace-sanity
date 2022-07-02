@@ -15,6 +15,7 @@ const VideoGallery = ({ videos }) => {
                 onClick={() => openModal(video.videoId.split("/")[3])}
               >
                 <img
+                  loading="lazy"
                   src={`https://i.ytimg.com/vi/${
                     video.videoId.split("/")[3]
                   }/hqdefault.jpg`}

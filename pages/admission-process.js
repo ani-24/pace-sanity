@@ -1,6 +1,10 @@
 import { client } from "../lib/client";
 import PortableText from "@sanity/block-content-to-react";
 
+import Image from "next/image";
+
+import Payment from "../public/payment.png";
+
 const AdmissionProcess = ({ details }) => {
   return (
     <div className="container">
@@ -9,7 +13,7 @@ const AdmissionProcess = ({ details }) => {
         <PortableText blocks={details.description} />
       </div>
       <div className="img">
-        <img src="./payment.png" alt="Payment" />
+        <Image src={Payment} layout="intrinsic" alt="Payment" priority />
       </div>
     </div>
   );
