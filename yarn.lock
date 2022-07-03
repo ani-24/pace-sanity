@@ -1778,6 +1778,11 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-lightbox-pack@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/react-lightbox-pack/-/react-lightbox-pack-0.1.5.tgz#1f7d8c33db9657076ea73be9a0bbec9c920bd333"
+  integrity sha512-kAtTwjRbZ/gHB8DDpPrJ8dncrbCEl7gjUvI7S7XqxHSFnSwVLENtncqQhjk1IWBDwMWjraY0BMCVqKgkKLpk8A==
+
 react@18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"

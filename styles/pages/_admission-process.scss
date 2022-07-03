@@ -29,15 +29,12 @@
   }
   .img {
     width: 100%;
-    display: none;
-    img {
-      width: 100%;
-    }
   }
   @media (min-width: 992px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    gap: 30px;
     .img {
       display: block;
     }

@@ -1,55 +1,22 @@
-import { client } from "../lib/client";
-import { urlFor } from "../lib/client";
+import React, { useState } from "react";
+import { client, urlFor } from "../lib/client";
 
-const lightbox = (images, idx) => {
-  let currentIdx = idx;
-  const overlay = document.querySelector(".overlay");
-  overlay.classList.remove("hide");
-  const modal = document.createElement("div");
-  modal.classList.add("modal", "lightbox");
-  modal.innerHTML = `
-    <i class="fas fa-circle-chevron-left fa-2x slide-btn prev-btn"></i>
-    <img class="current-img" src=${urlFor(images[idx].asset._ref)} alt=${
-    images[idx].alt
-  } style="max-height: 80%; max-width: 80%;" />
-    <i class="fas fa-circle-chevron-right fa-2x slide-btn next-btn"></i>
-  `;
-  document.body.appendChild(modal);
-  const prevBtn = document.querySelector(".prev-btn");
-  const nextBtn = document.querySelector(".next-btn");
-  const changeImg = () => {
-    const currentImg = modal.querySelector("img");
-    currentImg.src = urlFor(images[currentIdx].asset._ref);
-  };
-  prevBtn.addEventListener("click", () => {
-    currentIdx -= 1;
-    if (currentIdx < 0) {
-      currentIdx = images.length - 1;
-    }
-    changeImg();
-  });
-  nextBtn.addEventListener("click", () => {
-    currentIdx += 1;
-    if (currentIdx >= images.length) {
-      currentIdx = 0;
-    }
-    changeImg();
-  });
-  modal.addEventListener("click", (e) => {
-    if (
-      !e.target.classList.contains("current-img") &&
-      !e.target.classList.contains("slide-btn")
-    ) {
-      overlay.classList.add("hide");
-      modal.classList.add("hide");
-      setTimeout(() => {
-        document.body.removeChild(modal);
-      }, 750);
-    }
-  });
-};
+import { LightBox } from "react-lightbox-pack";
+import "react-lightbox-pack/dist/index.css";
 
 const ImageGallery = ({ images }) => {
+  const [toggle, setToggle] = useState(false);
+  const [sIndex, setSIndex] = useState(0);
+
+  // Handler
+  const lightBoxHandler = (state, sIndex) => {
+    setToggle(state);
+    setSIndex(sIndex);
+  };
+  const data = [];
+  images.forEach((el) => {
+    data.push({ image: urlFor(el.asset._ref) });
+  });
   return (
     <div className="image-gallery">
       <div className="gallery-inner">
@@ -61,13 +28,24 @@ const ImageGallery = ({ images }) => {
                 src={urlFor(el.asset._ref)}
                 alt={el.alt}
                 onClick={() => {
-                  lightbox(images, index);
+                  lightBoxHandler(true, index);
                 }}
               />
             </div>
           );
         })}
       </div>
+      <LightBox
+        state={toggle}
+        event={lightBoxHandler}
+        data={data}
+        imageWidth="60vw"
+        imageHeight="70vh"
+        thumbnailHeight={50}
+        thumbnailWidth={50}
+        setImageIndex={setSIndex}
+        imageIndex={sIndex}
+      />
     </div>
   );
 };

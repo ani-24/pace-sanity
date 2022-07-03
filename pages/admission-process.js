@@ -3,7 +3,7 @@ import PortableText from "@sanity/block-content-to-react";
 
 import Image from "next/image";
 
-import Payment from "../public/payment.png";
+import Payment from "../public/qr-code.jpeg";
 
 const AdmissionProcess = ({ details }) => {
   return (
@@ -13,7 +13,10 @@ const AdmissionProcess = ({ details }) => {
         <PortableText blocks={details.description} />
       </div>
       <div className="img">
-        <Image src={Payment} layout="intrinsic" alt="Payment" priority />
+        <div className="text">
+          <h1 className="title">Pay via QR code</h1>
+        </div>
+        <Image src={Payment} width={400} height={400} alt="Payment" priority />
       </div>
     </div>
   );
